@@ -1,0 +1,34 @@
+
+
+// Write a program to convert comma-separated values (CSV), into a 2D array. A new line indicates a new row in the array
+// Example input:
+
+
+
+
+
+
+const convertToArray = (stringInput) => {
+const newArray = [];
+
+
+const numColumns = 3; // Define the number of columns
+
+// Split the string into an array of characters
+const chars = stringInput.split(' ');
+console.log(chars)
+// Create the 2D array by slicing
+
+for (let i = 0; i < chars.length; i += numColumns) {
+    newArray.push(chars.slice(i, i + numColumns));
+}
+console.log(newArray)
+}
+
+
+const csvString = `abc,def,ghi,
+jkl,mno,pqr,
+stu,vwx,yza`
+
+
+convertToArray(csvString)
